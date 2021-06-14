@@ -1,0 +1,11 @@
+---
+application:
+  name: "sargambot"
+  project: "SargamBot"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-sargambot"
+  routes:
+  - application_name: "sargambot"
+    paths:
+    - "/*"
