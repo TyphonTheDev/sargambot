@@ -21,12 +21,14 @@ client.on("guildMemberAdd", async member => {
         .setAvatar(member.user.displayAvatarURL({ dynamic: false, format: "jpg" }))
         .setMemberCount(member.guild.memberCount)
         .setBackground("https://images.wallpaperscraft.com/image/landscape_art_road_127350_1280x720.jpg")
-        .toAttachment();
+        .toAttachment();*/
 
-    let Attachment = new Discord.MessageAttachment(Image.toBuffer(), "Welcome.png");*/
-    member.send(`**Thankyou for joining SARGAM. Please do follow my Instagram :\nhttps://www.instagram.com/satyam_classicshadaj/ **`)
+    let Attachment = new Discord.MessageAttachment("https://media.discordapp.net/attachments/831976801113997382/862696208748380170/ezgif.com-gif-maker_1.gif?width=259&height=259");
+    member.send(`**Thankyou for joining SARGAM. Please do follow my Instagram :\nhttps://www.instagram.com/satyam_classicshadaj/ **`).catch((err) => {
+        console.log(err)
+    })
     return client.channels.cache.get(Channel).send(Msg
-        //, Attachment
-        )
-        
+        , Attachment
+    )
+
 });
