@@ -5,8 +5,11 @@ client.on('message', async message => {
     client.prefix = config.prefix
 
     if (message.author.bot) return;
-    if (message.content.toLowerCase().includes("good morning") || message.content.toLowerCase().includes("good night")) {
+    if (message.content.toLowerCase().includes("good morning")) {
         message.channel.send("Have a Nice Day !! ENJOY !!");
+    }
+    if (message.content.toLowerCase().includes("good night")) {
+        message.channel.send("Bye Bye Tata !! Have a sweet dream !!");
     }
     if (message.content.toLowerCase().includes("hello")) {
         message.channel.send("Hello");
